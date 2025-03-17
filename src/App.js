@@ -1,6 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
 import { Component } from 'react';
+import Student from './Student';
+import Search from './Search';
 
 class App extends Component{
 
@@ -15,10 +17,13 @@ class App extends Component{
     }
     
     render(){
+
+        const {name,age} = this.state
         return(
             <div className="App">
                 <header className="App-header">
                     <img src={logo} className="App-logo" alt="logo" />
+                    <Search/>
                     <p>
                     Edit 123 <code>src/App.js</code> and save to reload.
                     </p>
@@ -30,9 +35,9 @@ class App extends Component{
                     >
                     Learn React
                     </a>
-                    <p>{this.state.name}</p>
-                    <p>{this.state.age}</p>
-                    
+                    {/* <p>{name}</p>
+                    <p>{age}</p> */}
+                    <Student name={name} age={age}/>
                 </header>
             </div>
 
